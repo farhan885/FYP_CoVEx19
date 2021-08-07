@@ -21,9 +21,9 @@ st.sidebar.title('CoVEx-19')
 select = st.sidebar.selectbox('Treatment type',['Symptoms based Treatment', 'X-Rays based Treatment'],key='1')
 
 # Load Models
-with open('symptoms_model.pkl', 'rb') as f:
+with open('models/symptoms_model.pkl', 'rb') as f:
     clf2 = pickle.load(f)
-covid_xray_model = keras.models.load_model('covid_xray_model.h5')
+covid_xray_model = keras.models.load_model('models/covid_xray_model.h5')
 
 
 if select == 'Symptoms based Treatment':
